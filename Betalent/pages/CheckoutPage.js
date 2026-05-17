@@ -15,10 +15,9 @@ class CheckoutPage {
 
   async fillCheckoutData(first, last, zip) {
 
+    //Preenchimento campos por variavel "First", "Last Name" e "Postal Code".
     await this.firstName.fill(first);
-
     await this.lastName.fill(last);
-
     await this.postalCode.fill(zip);
   }
 

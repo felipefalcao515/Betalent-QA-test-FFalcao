@@ -9,11 +9,14 @@ for (const user of users) {
   test(`Login - ${user.username} @smoke @login`, async ({ page }) => {
 
     const loginPage = new LoginPage(page);
-
+    
+    //Navegação
     await loginPage.goto();
 
+    //Campos de login
     await loginPage.login(user.username, user.password);
-
+    
+    //Tratamento user travado
     if (user.expected === 'locked') {
 
       await expect(loginPage.errorMessage)

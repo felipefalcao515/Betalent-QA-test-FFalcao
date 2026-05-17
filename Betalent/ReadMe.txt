@@ -19,6 +19,10 @@ Por gentileza rodar os testes pelas tags, vou listar as tags abaixo.
 @navigation
 @negative
 @checkout
+@api
+@auth
+@crud
+@validation
 
 Comando para abrir relatório após teste, a pasta "test-results" também gera reports de erro caso ocorram.
 npx playwright show-report

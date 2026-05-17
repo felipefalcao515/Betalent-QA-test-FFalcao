@@ -9,6 +9,7 @@ class CartPage {
 
   async removeProduct(productName) {
 
+    //Remoção de card pela tela carrinho.
     await this.page
       .locator('.cart_item')
       .filter({ hasText: productName })

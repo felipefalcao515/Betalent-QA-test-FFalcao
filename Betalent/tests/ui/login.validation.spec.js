@@ -12,6 +12,7 @@ test.describe('Login validations @login @negative', () => {
 
     await loginPage.login('', '');
 
+    //Asserção erro de campo obrigatório
     await expect(loginPage.errorMessage)
       .toContainText('Username is required');
 
@@ -25,6 +26,7 @@ test.describe('Login validations @login @negative', () => {
 
     await loginPage.login('standard_user', '');
 
+    //Asserção erro de campo obrigatório
     await expect(loginPage.errorMessage)
       .toContainText('Password is required');
 

@@ -10,12 +10,14 @@ class InventoryPage {
     this.logoutLink = page.getByText('Logout');
   }
 
+  //Seleção filtro por variavel "option".
   async sortProducts(option) {
     await this.productSort.selectOption(option);
   }
 
   async addProduct(productName) {
 
+    //Adicionar item ao carrinho pela tela inventario.
     await this.page
       .locator('.inventory_item')
       .filter({ hasText: productName })
@@ -23,6 +25,7 @@ class InventoryPage {
       .click();
   }
 
+  //Abrir carrinho
   async openCart() {
     await this.cartButton.click();
   }

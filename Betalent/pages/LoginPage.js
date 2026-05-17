@@ -12,16 +12,18 @@ class LoginPage {
 
   async goto() {
 
+    //Navegação.
     await this.page.goto('/');
 
   }
 
   async login(username, password) {
 
+    //Preenchimento dos campos.
     await this.usernameInput.fill(username);
-
     await this.passwordInput.fill(password);
 
+    //Ação Click.
     await this.loginButton.click();
 
   }
